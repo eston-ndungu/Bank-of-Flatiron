@@ -1,7 +1,7 @@
 import React from "react";
 import Transaction from "./Transaction";
 
-function TransactionsList() {
+function TransactionsList(transactions) {
   return (
     <table className="ui celled striped padded table">
       <tbody>
