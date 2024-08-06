@@ -4,11 +4,12 @@ import Search from "./Search";
 import AddTransactionForm from "./AddTransactionForm";
 
 function AccountContainer() {
+  //Initialize state to hold the list of transactions
   const [transactions, setTransactions] = useState([]);
   
 
 
-// Fetch data
+// useEffect to fetch data 
   useEffect(() => {
     fetch("http://localhost:8001/transactions")
       .then(response => response.json())
@@ -16,7 +17,7 @@ function AccountContainer() {
         setTransactions(data);
       
       });
-  }, []);
+  }, []); //Empty dependency array : Run the side effect every time our component renders
   
   
 
