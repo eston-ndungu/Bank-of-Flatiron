@@ -20,12 +20,14 @@ function AccountContainer() {
       });
   }, []); //Empty dependency array : Run the side effect every time our component renders
   
+  function handleSearchChange(event) {
+    setSearchTerm(event.target.value);
+  }
+
   const filteredTransactions = transactions.filter(transaction =>
     transaction.description.toLowerCase().includes(searchTerm.toLowerCase())
   );
-  const handleSearchChange = (event) => {
-    setSearchTerm(event.target.value);
-  };
+  
 
   return (
     <div>
