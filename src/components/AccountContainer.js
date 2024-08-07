@@ -6,7 +6,8 @@ import AddTransactionForm from "./AddTransactionForm";
 function AccountContainer() {
   //Initialize state to hold the list of transactions
   const [transactions, setTransactions] = useState([]);
-  
+  const [searchTerm, setSearchTerm] = useState("");
+
 
 
 // useEffect to fetch data 
@@ -19,14 +20,18 @@ function AccountContainer() {
       });
   }, []); //Empty dependency array : Run the side effect every time our component renders
   
-  
-
+  const filteredTransactions = transactions.filter(transaction =>
+    transaction.description.toLowerCase().includes(searchTerm.toLowerCase())
+  );
+  const handleSearchChange = (event) => {
+    setSearchTerm(event.target.value);
+  };
 
   return (
     <div>
-      <Search />
+      <Search onSearchChange={handleSearchChange} />
       <AddTransactionForm  />
-      <TransactionsList transactions={transactions} />
+      <TransactionsList transactions={filteredTransactions} />
     </div>
   );
 }
