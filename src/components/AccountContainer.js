@@ -27,9 +27,7 @@ function AccountContainer() {
   const filteredTransactions = transactions.filter(transaction =>
     transaction.description.toLowerCase().includes(search.toLowerCase())
   );
-  function addTransaction(newTransaction) {
-    setTransactions(prevTransactions => [...prevTransactions, newTransaction]);
-  }
+  
 
   return (
     <div>

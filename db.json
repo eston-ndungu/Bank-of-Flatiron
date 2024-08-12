@@ -125,6 +125,41 @@
       "description": "DE",
       "category": "housing",
       "amount": "100"
+    },
+    {
+      "id": "184c",
+      "date": "2024-08-16",
+      "description": "Chipotle",
+      "category": "Food",
+      "amount": "300"
+    },
+    {
+      "id": "bb19",
+      "date": "2024-08-16",
+      "description": "Chipotle",
+      "category": "Food",
+      "amount": "300"
+    },
+    {
+      "id": "6940",
+      "date": "2024-08-16",
+      "description": "Chipotle",
+      "category": "Food",
+      "amount": "300"
+    },
+    {
+      "id": "9e92",
+      "date": "2024-08-16",
+      "description": "Chipotle",
+      "category": "Food",
+      "amount": "300"
+    },
+    {
+      "id": "a920",
+      "date": "2024-08-16",
+      "description": "Chipotle",
+      "category": "Food",
+      "amount": "300"
     }
   ]
 }
