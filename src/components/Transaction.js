@@ -1,6 +1,6 @@
 import React from "react";
 
-function Transaction({date, description, category, amount}) {
+function Transaction({date, description, category, amount, }) {
   
   return (
     <tr>
@@ -8,6 +8,7 @@ function Transaction({date, description, category, amount}) {
       <td>{description}</td>
       <td>{category}</td>
       <td>{amount}</td>
+      
     </tr>
   );
 }
